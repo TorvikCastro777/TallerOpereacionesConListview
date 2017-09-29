@@ -1,0 +1,80 @@
+<resources>
+    <string name="app_name">Operaciones</string>
+    <string name="area">Areas</string>
+    <string name="volumen">Volumenes</string>
+    <string name="datos">Operaciones Realizadas</string>
+    <string name="cuadrado">Cuadrado</string>
+    <string name="triangulo">Triangulo</string>
+    <string name="circulo">Circulo</string>
+    <string name="rectangulo">Rectangulo</string>
+    <string name="esfera">Esfera</string>
+    <string name="cilindro">Cilindro</string>
+    <string name="cono">Cono</string>
+    <string name="cubo">Cubo</string>
+    <string name="tituloCuadrado">Ingresa el valor del Lado del Cuadrado</string>
+    <string name="valor">Digite el valor</string>
+    <string name="valor1">El Area del Cuadrado es:</string>
+    <string name="calcular">Calcular</string>
+    <string name="limpiar">Borrar</string>
+    <string name="tituloc">Calcular el Area de un Cuadrado</string>
+    <string name="titulor">Calcular el Area de un Rectangulo</string>
+    <string name="base">Ingrese el Valor de la Base</string>
+    <string name="altura">Ingrese el valor de la Altura</string>
+    <string name="titulot">Calcular el Area de un Triangulo</string>
+    <string name="titulocc">Calcular el Area de un Circulo</string>
+    <string name="radio">Ingrese el valor del Radio</string>
+    <string name="titulocilindro">Calcular el Volumen de un Cilindro</string>
+    <string name="titulocubo">Calcular Volumen de un Cubo</string>
+    <string name="tituloesfera">Calcular Volumen de una Esfera</string>
+    <string name="titulocono">Calcular Volumen de un Cono</string>
+    <string name="titulocu">Ingresar el valor de las Aristas del Cubo</string>
+    <string name="numero">No</string>
+    <string name="operacion">Operación</string>
+    <string name="datos1">Datos</string>
+    <string name="resultado">Resultado:</string>
+    <string name="areacuadrado">Area Del Cuadrado</string>
+    <string name="areacirculo">Area Del Circulo</string>
+    <string name="areatriangulo">Area Del Triangulo</string>
+    <string name="arearectangulo">Area Del Rectangulo</string>
+    <string name="volumencono">Volumen Del Cono</string>
+    <string name="volumencubo">Volumen Del Cubo</string>
+    <string name="volumenesfera">Volumen De Esfera</string>
+    <string name="volumencilindro">Volumen Del Cilindro</string>
+
+    <array name="Opciones">
+        <item> @string/area</item>
+        <item> @string/volumen</item>
+        <item> @string/datos</item>
+    </array>
+
+    <array name="OpcionesArea">
+        <item> @string/cuadrado</item>
+        <item> @string/rectangulo</item>
+        <item> @string/triangulo</item>
+        <item> @string/circulo</item>
+    </array>
+
+    <array name="OpcionesVolumen">
+        <item> @string/esfera</item>
+        <item> @string/cilindro</item>
+        <item> @string/cono</item>
+        <item> @string/cubo</item>
+    </array>
+
+    <array name="NombreOperaciones">
+        <item> @string/areacuadrado </item>
+        <item> @string/areacirculo </item>
+        <item> @string/areatriangulo </item>
+        <item> @string/arearectangulo </item>
+        <item> @string/volumencono </item>
+        <item> @string/volumencubo </item>
+        <item> @string/volumencilindro </item>
+        <item> @string/volumenesfera </item>
+    </array>
+    <string name="mensajeexitoso">Operacion Almacenada Exitosamente!!</string>
+    <string name="guardar">Guardar</string>
+    <string name="error1">El valor a calcular no puede ser \"0\"</string>
+    <string name="error">Digite el valor a calcular</string>
+
+
+</resources>
