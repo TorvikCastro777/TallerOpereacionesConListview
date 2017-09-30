@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import static android.R.attr.button;
 
 public class Triangulo extends Activity {
@@ -26,19 +28,21 @@ public class Triangulo extends Activity {
     }
 
     public void calcularTriangulo(View view){
-        String op,dt1,dt2,rs;
-        double base,altura, resul;
+        String opera,dt1,dt2,res,dat;
+        double base,altura, result;
         if (validar()){
-            op = "Area del rectangulo";
+            opera = "Area del Trinagulo";
             base = Double.parseDouble(dato1.getText().toString());
             altura = Double.parseDouble(dato2.getText().toString());
             dt1 = "Valor de la base: " + base;
             dt2 = "Valor de la altura: " + altura;
-            resul = ((base*altura)/2);
-            //rs = Integer.toString(resul);
-            //Operaciones p = new Operaciones(op,dt1,dt2,rs);
-            //p.calcular();
-            resultado.setText("El area del Triangulo es " + String.format( "Value of a: %.2f", resul ));
+            dat = dt1 +" \n"+dt2;
+            result = ((base*altura)/2);
+            res = Integer.toString((int) result);
+            resultado.setText("El area del Triangulo es " + String.format( "%.1f", result ));
+            Operaciones p = new Operaciones(opera,dat,res);
+            p.calcular();
+            Toast.makeText(this,resources.getString(R.string.mensajeexitoso),Toast.LENGTH_SHORT).show();
         }
     }
 

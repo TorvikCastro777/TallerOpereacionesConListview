@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import static android.R.attr.button;
 
 public class Cono extends Activity {
@@ -26,19 +28,21 @@ public class Cono extends Activity {
     }
 
     public void calcularCono(View view){
-        String op,dt1,dt2,rs;
-        double rad,altura, resul;
+        String opera,dt1,dt2,res,dat;
+        double rad,altura, result;
         if (validar()){
-            op = "Volumen del cono";
+            opera = "Volumen del cono";
             rad = Double.parseDouble(dato1.getText().toString());
             altura = Double.parseDouble(dato2.getText().toString());
-            dt1 = "Valor de la base: " + rad;
+            dt1 = "Valor del radio: " + rad;
             dt2 = "Valor de la altura: " + altura;
-            resul = (Math.PI*(Math.pow(rad,2)*altura)/3);
-            //rs = Integer.toString(resul);
-            //Operaciones p = new Operaciones(op,dt1,dt2,rs);
-            //p.calcular();
-            resultado.setText("El Volumen del Cono Es: " + String.format( "Value of a: %.2f", resul ));
+            dat = dt1 +"\n"+dt2;
+            result = (Math.PI*(Math.pow(rad,2)*altura)/3);
+            res = Integer.toString((int) result);
+            resultado.setText("El Volumen del Cono Es: " + String.format( "%.1f", result ));
+            Operaciones p = new Operaciones(opera,dat,res);
+            p.calcular();
+            Toast.makeText(this,resources.getString(R.string.mensajeexitoso),Toast.LENGTH_SHORT).show();
         }
     }
 

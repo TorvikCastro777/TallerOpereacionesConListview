@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Cuadrado extends Activity {
 
@@ -25,17 +26,16 @@ public class Cuadrado extends Activity {
 
     public void calcular(View view){
         String dat,res,opera;
-        double lado, resul;
         if (validar()){
             opera="Area del Cuadrado";
-            lado = Double.parseDouble(dato.getText().toString());
-            dat = dato.getText().toString();
-            resul = lado * lado;
-            res = resultado.getText().toString();
-            resultado.setText("El area del cuadrado es " + String.format( "Value of a: %.2f", resul ));
-
-            Operaciones p = new Operaciones(dat,res,opera);
+            double lado = Double.parseDouble(dato.getText().toString());
+            dat = "Valor del lado:  " + dato.getText().toString();
+            double result = lado * lado;
+            res = Integer.toString((int) result);
+            resultado.setText("El area del cuadrado es " + String.format( "%.1f", result ));
+            Operaciones p = new Operaciones(opera,dat,res);
             p.calcular();
+            Toast.makeText(this,resources.getString(R.string.mensajeexitoso),Toast.LENGTH_SHORT).show();
         }
     }
 

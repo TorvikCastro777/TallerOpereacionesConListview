@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Rectangulo extends Activity {
     private TextView resultado;
@@ -24,19 +25,21 @@ public class Rectangulo extends Activity {
     }
 
     public void calcularRectangulo(View view){
-        String op,dt1,dt2,rs;
-        double base,altura, resul;
+        String opera,dt1,dt2,res,dat;
+        double base,altura, result;
         if (validar()){
-            op = "Area del rectangulo";
+            opera = "Area del rectangulo";
             base = Double.parseDouble(dato1.getText().toString());
             altura = Double.parseDouble(dato2.getText().toString());
             dt1 = "Valor de la base: " + base;
             dt2 = "Valor de la altura: " + altura;
-            resul = (base*altura);
-            //rs = Integer.toString(resul);
-            //Operaciones p = new Operaciones(op,dt1,dt2,rs);
-            //p.calcular();
-            resultado.setText("El area del Rectangulo es " + String.format( "Value of a: %.2f", resul ));
+            dat = dt1 +"\n"+dt2;
+            result = (base*altura);
+            res = Integer.toString((int) result);
+            resultado.setText("El area del Rectangulo es " + String.format( "%.1f", result ));
+            Operaciones p = new Operaciones(opera,dat,res);
+            p.calcular();
+            Toast.makeText(this,resources.getString(R.string.mensajeexitoso),Toast.LENGTH_SHORT).show();
         }
     }
 

@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import static android.R.attr.button;
 
 public class Esfera extends Activity {
@@ -27,15 +29,19 @@ public class Esfera extends Activity {
     }
 
     public void calcularEsfera(View view){
-        String op,dt,rs;
-        double rad, resul;
+        String dat,res,opera;
+        double rad, result;
         if (validar()){
-            op = "Volumen de la esfera";
+            opera = "Volumen de la esfera";
             rad = Double.parseDouble(dato.getText().toString());
-            dt = "Valor del radio : " + rad;
-            resul = (Math.PI*(4)*(Math.pow(rad,3)));
-            resul = (resul/3);
-            resultado.setText("El Volumen de la Esfera Es: " + String.format( "Value of a: %.2f", resul ));
+            dat = "Valor del radio : " + rad;
+            result = (Math.PI*(4)*(Math.pow(rad,3)));
+            result = (result/3);
+            res = Integer.toString((int) result);
+            resultado.setText("El Volumen de la Esfera Es: " + String.format( "%.1f", result ));
+            Operaciones p = new Operaciones(opera,dat,res);
+            p.calcular();
+            Toast.makeText(this,resources.getString(R.string.mensajeexitoso),Toast.LENGTH_SHORT).show();
         }
     }
 

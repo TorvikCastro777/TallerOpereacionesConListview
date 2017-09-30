@@ -12,19 +12,23 @@ public class Operaciones {
         this.resultado = resultado;
     }
 
-    public void setDato(String dato){
-        this.dato = dato;
+    public String getOperacion(){
+        return operacion;
+    }
+
+    public void setOperacion(String operacion){
+        this.operacion = operacion;
     }
 
     public String getDato(){
         return dato;
     }
 
-    public void setOperacion(String operacion){
-        this.resultado = resultado;
+    public void setDato(String dato){
+        this.dato = dato;
     }
 
-    public String getOperacion(){
+    public String getResultado(){
         return resultado;
     }
 
@@ -32,12 +36,8 @@ public class Operaciones {
         this.resultado = resultado;
     }
 
-    public String getResultado(){
-        return resultado;
-    }
-
     public void calcular(){
-
+        Datos.calcular(this);
     }
 
 

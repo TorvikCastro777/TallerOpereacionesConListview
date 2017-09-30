@@ -30,6 +30,7 @@ public class ListarOperaciones extends AppCompatActivity {
             c3.setText(operaciones.get(i).getDato());
             c4.setText(operaciones.get(i).getResultado());
 
+
             fila.addView(c1);
             fila.addView(c2);
             fila.addView(c3);

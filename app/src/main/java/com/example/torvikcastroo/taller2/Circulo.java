@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import static android.R.attr.button;
 
 public class Circulo extends Activity {
@@ -27,13 +29,18 @@ public class Circulo extends Activity {
     }
 
     public void calcularCirculo(View view){
-        double rad, resul;
+        String dat,res,opera;
+        double rad, result;
         if (validar()){
-            //op = "Area del circulo";
+            opera="Area del Circulo";
             rad = Double.parseDouble(dato.getText().toString());
-            //dt = "Valor del Radio: " + rad;
-            resul = (Math.PI*(Math.pow(rad,2)));
-            resultado.setText("El Area del Circulo Es: " + String.format( "Value of a: %.2f", resul ));
+            dat = "Valor del radio: " + dato.getText().toString();
+            result = (Math.PI*(Math.pow(rad,2)));
+            res = Integer.toString((int) result);
+            resultado.setText("El Area del Circulo Es: " + String.format( "%.1f", result ));
+            Operaciones p = new Operaciones(opera,dat,res);
+            p.calcular();
+            Toast.makeText(this,resources.getString(R.string.mensajeexitoso),Toast.LENGTH_SHORT).show();
         }
     }
     public boolean validar(){

@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import static android.R.attr.button;
 
 public class Cubo extends Activity {
@@ -26,18 +28,18 @@ public class Cubo extends Activity {
     }
 
     public void calcularCubo(View view){
-        String op,dt,rs;
-        double rad, resul;
+        String dat,res,opera;
+        double rad, result;
         if (validar()){
-            op = "Volumen Del Cubo";
+            opera = "Volumen Del Cubo";
             rad = Double.parseDouble(dato.getText().toString());
-            dt = "Valor de la arista: " + rad;
-            resul = Math.pow(rad,3);
-            //rs = Integer.toString(resul);
-            //Operaciones p = new Operaciones(op, op,dt,rs);
-            //p.calcular();
-            resultado.setText("El Volumen del Cubo Es: " + String.format( "Value of a: %.2f", resul ));
-
+            dat = "Valor de la arista: " + rad;
+            result = Math.pow(rad,3);
+            res = Integer.toString((int) result);
+            resultado.setText("El Volumen del Cubo Es: " + String.format( "%.1f", result ));
+            Operaciones p = new Operaciones(opera,dat,res);
+            p.calcular();
+            Toast.makeText(this,resources.getString(R.string.mensajeexitoso),Toast.LENGTH_SHORT).show();
         }
     }
 
